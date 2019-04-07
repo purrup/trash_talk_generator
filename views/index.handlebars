@@ -1,0 +1,77 @@
+<div class="container py-5">
+  <div class="row py-3 justify-content-center">
+    <h1>想對誰說幹話</h1>
+  </div>
+  <form method="POST" action="/">
+
+    {{!-- 選取職業 --}}
+    <div class="row py-2">
+      <div class="card-deck py-3">
+
+        {{!-- engineer --}}
+        <div class="card mx-2 border-secondary">
+          <img class="card-img-top" style="height : 19rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            alt="Card image cap">
+          <div class="card-body mx-auto text-secondary">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="jobs" class="custom-control-input" value="engineer"
+                {{#eq target 'engineer'}} checked="" {{/eq}}>
+              <label class="custom-control-label" for="customRadio1">工程師</label>
+            </div>
+          </div>
+        </div>
+
+        {{!-- designer --}}
+        <div class="card mx-2 w-100 border-secondary">
+          <img class="card-img-top" style="height : 19rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            alt="Card image cap">
+          <div class="card-body mx-auto text-secondary">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="jobs" class="custom-control-input" value="designer"
+                {{#eq target 'designer'}} checked="" {{/eq}}>
+              <label class="custom-control-label" for="customRadio2">設計師</label>
+            </div>
+          </div>
+        </div>
+
+        {{!-- entrepreneur --}}
+        <div class="card mx-2 border-secondary">
+          <img class="card-img-top" style="height : 19rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="Card image cap">
+          <div class="card-body mx-auto text-secondary">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio3" name="jobs" class="custom-control-input" value="entrepreneur"
+                {{#eq target 'entrepreneur'}} checked="" {{/eq}}>
+              <label class="custom-control-label" for="customRadio3">創業家</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    {{!-- 幹話產生區 --}}
+    <div class="row py-5">
+      <div class="col-sm-2">
+        <button class="btn btn-secondary btn-lg" type="submit">產生幹話</button>
+      </div>
+      {{#if trashTalk}}
+      <div class="col-sm-9 ">
+        <div class="alert alert-dark m-0" role="alert">
+          {{!--  display trash talk here --}}
+          <p class="align-self-center m-0 h5">
+            {{trashTalk}}
+          </p>
+        </div>
+      </div>
+
+      {{/if}}
+    </div>
+
+
+  </form>
+</div>
