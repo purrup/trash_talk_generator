@@ -42,6 +42,3 @@ $ nodemon app.js
 
 - if you click the button without choosing anyone, there will be an alert display on the bottom, reminding you that you must choose one radio.
 
-## Image
-
-![preview](https://imgur.com/a/GPRctAV)
